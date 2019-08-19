@@ -1,9 +1,10 @@
 import React from 'react'
 
-export default function Navbar() {
+
+export default function NewRecipe() { 
     return(
         <div>
-
+            NEW PAGE PAGE 
         </div>
     )
 }
