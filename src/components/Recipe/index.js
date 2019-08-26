@@ -41,10 +41,17 @@ export default function Recipe({match}){
                 </StyledTableHead>
                 <tbody>
                     {ingredients} 
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td>Recipe Total: </td>
+                        <td>{recipeTotal}</td>
+                    </tr>
                 </tbody>
             </StyledTable>
             <div>
-                total: {recipeTotal}
+                Recipe Total: {recipeTotal}
             </div>
         </Container>
     )

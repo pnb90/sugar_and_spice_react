@@ -3,7 +3,6 @@ import { Container, StyledLink } from './style'
 import Card from 'components/Card'
 import axios from 'axios'
 
-
 export default function Home() { 
     const [recipes, setRecipes] = useState([])
 
