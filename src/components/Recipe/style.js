@@ -8,3 +8,19 @@ export const TitleBar = styled.div`
     width: 100%
     background-color: #BCAAA4
 `
+
+export const Container = styled.div`
+    margin-left: 15em;
+`
+
+export const StyledTable = styled.table`
+    border: 1px solid black;
+`
+
+export const StyledTableHead = styled.thead`
+    border: 1px solid black;
+`
+
+export const StyledTableData = styled.td`
+    border: 1px solid black;
+`

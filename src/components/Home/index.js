@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from 'react'
 import { Container, StyledLink } from './style'
-import Navbar from 'components/Navbar'
 import Card from 'components/Card'
 import axios from 'axios'
 
@@ -26,7 +25,6 @@ export default function Home() {
 
     return(
         <div>
-            <Navbar />
             <Container>
                 {recipeTitles}
             </Container>   
