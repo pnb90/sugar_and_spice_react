@@ -6,7 +6,6 @@ export const Container = styled.div`
   justify-content: center;
   margin-left: 15em;
 `
-
 export const StyledLink = styled.a`
   text-decoration: none;
 `

@@ -1,12 +1,12 @@
 import React from 'react'
-import { Container, RecipeName } from './style'
+import { CardLink, RecipeName } from './style'
 
 export default function Card(props) {
   return(
-    <Container>
+    <CardLink href={"/recipes/" + props.recipeID}>
       <RecipeName> 
         {props.name}
       </RecipeName>
-    </Container>
+    </CardLink>
   )
 }

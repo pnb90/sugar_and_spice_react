@@ -5,7 +5,6 @@ import {Container, StyledForm} from './style'
 export default function NewRecipe() { 
     return(
         <Container>
-            AY YO I'M THE NEW RECIPES PAGE!!!
             <Form />
         </Container>
     )
