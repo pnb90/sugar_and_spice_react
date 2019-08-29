@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react'
-import { Container, StyledLink } from './style'
+import { Container, StyledLink, CardLink, RecipeName } from './style'
 import Card from 'components/Card'
 import axios from 'axios'
 
@@ -14,19 +14,28 @@ export default function Home() {
 
     let recipeTitles = recipes.map(recipe => {
         return(
-                <StyledLink href={"/recipes/" + recipe.id}>
-                    <Card
-                        key={recipe.id}
-                        name={recipe.name}
-                    />
-                </StyledLink>
+                // <CardLink href={"/recipes/" + recipe.id}>
+                //     <RecipeName>
+                //         {recipe.name}
+                //     </RecipeName>
+                // </CardLink>
+                <Card
+                    key={recipe.id}
+                    recipeID={recipe.id}
+                    name={recipe.name}
+                />
     )})
 
     return(
-        <div>
-            <Container>
-                {recipeTitles}
-            </Container>   
-        </div>
+        <Container>
+            <Card 
+                recipeID="new"
+                name="Add New Recipe"
+            />
+            {recipeTitles}
+            {recipeTitles}
+            {recipeTitles}
+            {recipeTitles}
+        </Container>   
     )
 }

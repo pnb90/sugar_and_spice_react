@@ -1,13 +1,14 @@
 import styled from 'styled-components'
 import { device } from '../device'
 
-export const Container = styled.div`
+export const CardLink = styled.a`
   width: 100%;
   height: 40%;
   margin: 1.25em;
   padding: 0.25em;
   border-style: solid;
   border-radius: 10px;
+  text-decoration: none;
 
   @media ${device.tablet} {
     width: 33%;
