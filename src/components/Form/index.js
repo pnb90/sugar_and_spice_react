@@ -2,6 +2,14 @@ import React, {useState, useEffect} from 'react'
 import axios from 'axios'
 
 export default function Form() {
+    const [state, setState] = useState({
+        recipeName: "",
+        ingredient: "",
+        ingredients: [],
+        amount: "",
+        measurement: "",
+        error: ""
+    })
     const [recipeName, setRecipeName] = useState("")
     const [ingredient, setIngredient] = useState("")
     const [ingredients, setIngredients] = useState([])

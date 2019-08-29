@@ -10,7 +10,6 @@ export const TitleBar = styled.div`
 `
 
 export const Container = styled.div`
-    margin-left: 15em;
 `
 
 export const StyledTable = styled.table`

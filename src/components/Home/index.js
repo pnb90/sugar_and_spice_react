@@ -14,11 +14,6 @@ export default function Home() {
 
     let recipeTitles = recipes.map(recipe => {
         return(
-                // <CardLink href={"/recipes/" + recipe.id}>
-                //     <RecipeName>
-                //         {recipe.name}
-                //     </RecipeName>
-                // </CardLink>
                 <Card
                     key={recipe.id}
                     recipeID={recipe.id}
