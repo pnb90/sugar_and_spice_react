@@ -24,3 +24,9 @@ export const RecipeName = styled.h2`
   overflow: auto;
   text-align: center;
 `
+
+export const StyledImg = styled.img`
+  /* height: 2em
+  width: 2em */
+  max-width: 100%; 
+`
