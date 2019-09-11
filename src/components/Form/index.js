@@ -13,8 +13,22 @@ export default function Form() {
     const [measurement, setMeasurement] = useState("")
     const [error, setError] = useState("")
 
+    const addIngredient = () => {
+        setIngredientList(oldIngredients => [...oldIngredients, {ingredientRow}])
+    }
+    
+    const removeIngredient = () => {
+        console.log("I'm activinati removeIngredient")
+        console.log(ingredientRow.key)
+        console.log(ingredientList.filter(ingredientRow => ingredientRow.key != 2))
+        // var newList = ingredientList.filter(ingredientRow => ingredientRow.key != ingredientRow.key)
+        // console.log(ingredientList.filter())
+        // setIngredientList(ingredientList.filter(item => item.key != item.key))
+    }
+
+
     const ingredientRow = 
-        <TableRow>
+        <TableRow key={ingredientList.length + 1}>
             <TableCell>
                 <input
                     type="text" 
@@ -46,18 +60,13 @@ export default function Form() {
                     required
                 />
             </TableCell>
+            <TableCell>
+                <Fab onClick={removeIngredient}><RemoveIcon /></Fab>
+            </TableCell>
         </TableRow>
 
     const ingredientes = ingredientList.map(({ingredientRow}) => ingredientRow  )
 
-    const addIngredient = () => {
-        setIngredientList(oldIngredients => [...oldIngredients, {ingredientRow}])
-    }
-
-    const removeIngredient = () => {
-        console.log(ingredientList)
-        // setIngredientList(ingredientList.filter(ingredient, ingredient.id != (ingredientList.length - 1)))
-    }
 
     const handleSubmit = () => {
         axios.post("/api/recipes", {
