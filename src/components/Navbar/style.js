@@ -13,7 +13,12 @@ export const TitleBar = styled.div`
   z-index: 1;
   top: 0;
   left: 0;
-  background-color: #BCAAA4;
+  background-color: #BA775B;
   overflow-x: hidden;
   padding-top: 20px;
+`
+
+export const StyledLink = styled.a`
+  text-decoration: none;
+  color: black;
 `

@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react'
-import { Container, StyledLink, CardLink, RecipeName } from './style'
+import { Container } from './style'
 import Card from 'components/Card'
 import axios from 'axios'
 
@@ -25,7 +25,7 @@ export default function Home() {
         <Container>
             <Card 
                 recipeID="new"
-                name="Add New Recipe"
+                name="+ Add New Recipe +"
             />
             {recipeTitles}
             {recipeTitles}
