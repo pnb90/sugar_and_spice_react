@@ -9,7 +9,13 @@ export const CardLink = styled.a`
   border-style: solid;
   border-radius: 10px;
   text-decoration: none;
+  background: #EDD8C4;
+  color: black;
 
+  a:visited{
+  text-decoration: none;
+  color: black;
+  }
   @media ${device.tablet} {
     width: 33%;
   }

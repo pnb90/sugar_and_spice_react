@@ -1,6 +1,7 @@
 import React, {useEffect, useState} from 'react'
 import axios from 'axios'
 import {Container, StyledTable, StyledTableHead, StyledTableData} from './style'
+import {Table, TableBody, TableCell, TableHead, TableRow } from '@material-ui/core'
 
 export default function Recipe({match}){
     const [recipe, setRecipe] = useState([])
@@ -20,7 +21,7 @@ export default function Recipe({match}){
                             <StyledTableData>${ingredient.price}</StyledTableData>
                             <StyledTableData>{ingredient.weight}</StyledTableData>
                             <StyledTableData>${(ingredient.price/ingredient.weight).toFixed(2)}</StyledTableData>
-                            <StyledTableData>{(ingredient.price/5).toFixed(2)}</StyledTableData>
+                            <StyledTableData>${(ingredient.price/5).toFixed(2)}</StyledTableData>
                         </tr>
                     )}))
             })
@@ -29,7 +30,28 @@ export default function Recipe({match}){
     return(
         <Container>
             <h1>{recipe.name}</h1>
-            <StyledTable> 
+            <Table> 
+                <TableHead>
+                    <TableRow>
+                        <TableCell> Ingredient </TableCell>
+                        <TableCell> Price </TableCell>
+                        <TableCell> Amount </TableCell>
+                        <TableCell> Price per Unit </TableCell>
+                        <TableCell> Price per Amount </TableCell>
+                    </TableRow>
+                </TableHead>
+                <TableBody>
+                    {ingredients} 
+                    <TableRow>
+                        <TableCell></TableCell>
+                        <TableCell></TableCell>
+                        <TableCell></TableCell>
+                        <TableCell>Recipe Total: </TableCell>
+                        <TableCell>{recipeTotal}</TableCell>
+                    </TableRow>
+                </TableBody>
+            </Table>
+            {/* <StyledTable> 
                 <StyledTableHead>
                     <tr>
                         <th> Ingredient </th>
@@ -49,10 +71,7 @@ export default function Recipe({match}){
                         <td>{recipeTotal}</td>
                     </tr>
                 </tbody>
-            </StyledTable>
-            <div>
-                Recipe Total: {recipeTotal}
-            </div>
+            </StyledTable> */}
         </Container>
     )
 }
